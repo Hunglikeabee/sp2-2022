@@ -56,7 +56,6 @@ export default function FeaturedCards() {
   const navigate = useNavigate();
 
   const [result, setResult] = useState([]);
-  console.log(result)
 
   const apiCall = useCallback(async () => {
     try {
