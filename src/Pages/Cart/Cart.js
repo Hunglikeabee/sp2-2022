@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { getCart } from "../../components/LocalStorage";
 import { NavLink } from "react-router-dom";
-import { APIURL } from "../../components/Settings";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

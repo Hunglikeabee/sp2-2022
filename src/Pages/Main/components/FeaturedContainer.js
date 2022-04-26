@@ -17,6 +17,7 @@ const StyledH1 = styled.h1`
   color: white;
 `;
 
+
 export default function FeaturedContainer() {
   return (
     <StyledFeaturedContainer className="featured-shoes">

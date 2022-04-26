@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useCallback, useState, useEffect } from "react";
+import {  useState, useEffect } from "react";
 import { APIURL } from "../../../components/Settings";
 import { useLocation, useNavigate } from "react-router";
 import Button from "../../../components/generalcomponents/Button";
@@ -55,7 +55,7 @@ export default function SearchPage() {
   const getParams = useLocation().search;
   const searchResult = new URLSearchParams(getParams).get("search");
 
-  const apiCall = useCallback(async () => {
+  const apiCall = async () => {
     try {
       const apiCall = await fetch(APIURL + "/products");
       const apiResult = await apiCall.json();
@@ -63,7 +63,7 @@ export default function SearchPage() {
     } catch (error) {
       console.log(error);
     }
-  });
+  };
 
   useEffect(() => apiCall(), []);
 

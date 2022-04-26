@@ -25,6 +25,10 @@ const StyledH1 = styled.h1`
   padding-bottom: 50px;
 `;
 
+const StyledP = styled.p`
+  font-size: 22px;
+`
+
 export default function Login() {
   const navigate = useNavigate();
 
@@ -67,6 +71,7 @@ export default function Login() {
   return (
     <StyledLogin onSubmit={HandleSubmit}>
       <StyledH1>Admin Log inn</StyledH1>
+      <StyledP>admin - Pass1234</StyledP>
       <InputField
         value={theUsername}
         onChange={(e) => setUsername(e.target.value.trim())}

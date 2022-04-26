@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -190,22 +190,6 @@ export default function Menu() {
   const Cancle = () => {
     setPrompt((prev) => !prev);
   };
-
-  let promptMenu;
-
-  if (prompt) {
-    promptMenu = (
-      <PromptMessage>
-        <StyledText>Are you sure you want to log out?</StyledText>
-        <StyledButton style={{ background: "lightgreen" }} onClick={Logout}>
-          Ok
-        </StyledButton>
-        <StyledButton style={{ background: "lightcoral" }} onClick={Cancle}>
-          Cancle
-        </StyledButton>
-      </PromptMessage>
-    );
-  }
 
   const list = getCart();
   let total = 0;

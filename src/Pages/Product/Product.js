@@ -69,6 +69,24 @@ const StyledImage = styled.div`
   background-position: center;
 `;
 
+const LoadingWheel = styled.div`
+width: 150px;
+height: 150px;
+border: 3px solid orange;
+border-top: 5px solid white;
+border-radius: 50%;
+animation: spinny 3s forwards linear infinite;
+
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+`
+
 export default function Product() {
   const navigate = useNavigate();
   const getParams = useLocation().search;
@@ -95,7 +113,7 @@ export default function Product() {
     saveShoes(id, singleData);
   };
 
-  return result.map((item, key) => (
+  const resultMap = result.map((item, key) => (
     <StyledProduct href={item.id} key={key}>
       <StyledH1>{item.title}</StyledH1>
       <StyledImage
@@ -127,4 +145,17 @@ export default function Product() {
       </Button>
     </StyledProduct>
   ));
+
+  let isLoading = <LoadingWheel></LoadingWheel>
+
+  if(result.length > 0) {
+    isLoading = ""
+  }
+
+  return(
+    <>
+      {isLoading}
+      {resultMap}
+    </>
+  )
 }

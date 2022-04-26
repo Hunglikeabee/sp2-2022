@@ -34,18 +34,36 @@ const StyledPrice = styled.h4`
   color: brown;
 `;
 
+const LoadingWheel = styled.div`
+width: 150px;
+height: 150px;
+border: 3px solid orange;
+border-top: 5px solid white;
+border-radius: 50%;
+animation: spinny 3s forwards linear infinite;
+
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+`
+
 export default function FeaturedCards() {
   const navigate = useNavigate();
 
   const [result, setResult] = useState([]);
+  console.log(result)
 
   const apiCall = useCallback(async () => {
     try {
       const apiCall = await fetch(APIURL + "/products/");
       const apiResult = await apiCall.json();
-      console.log(apiResult)
-      setResult(apiResult);
       const filteredResult = apiResult.filter((item) => item.featured);
+      setResult(filteredResult);
     } catch (error) {
       console.log(error);
     }
@@ -56,7 +74,7 @@ export default function FeaturedCards() {
   const hrefId = "shoes?id=";
   const hrefAdmin = "/admin?id=";
 
-  return result.map((item, key) => (
+  const resultMap = result.map((item, key) => (
     <CardContainer data-id={item.id} key={key}>
       <Editbutton onClick={() => navigate(hrefAdmin + item.id)} />
       <StyledH2>{item.title}</StyledH2>
@@ -79,4 +97,18 @@ export default function FeaturedCards() {
       <Button onClick={() => navigate(`${hrefId + item.id}`)}>MORE</Button>
     </CardContainer>
   ));
+
+  let isLoading = <LoadingWheel></LoadingWheel>
+
+  if(result.length > 0) {
+    isLoading = ""
+  }
+
+  return (
+    <>
+    {isLoading}
+    {resultMap}
+    </>
+
+  )
 }
