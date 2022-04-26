@@ -42,9 +42,9 @@ html, body {
     background: lightgreen;
 }
 
-/* body {
-    background-image: url("../public/images/tekstur.jpg");
-} */
+body {
+    background-image: url("../public/images/tekstur.png");
+}
 
 
 /* FONTS */
