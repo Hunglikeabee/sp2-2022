@@ -15,9 +15,8 @@ Installing
 This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
 Clone the repo:
-git clone git@github.com/Hunglikeabee/sp2-2022
+`git clone git@github.com/Hunglikeabee/sp2-2022`
 
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
 
 Install the dependencies:
 npm install
@@ -29,4 +28,5 @@ Contributing
 Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate CONTRIBUTING.md and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
 
 Contact
-(https://www.linkedin.com/in/hans-christian-osbak-b318ab1b9/ "My Linkedin page")
+
+[I'm a link](https://www.linkedin.com/in/hans-christian-osbak-b318ab1b9/ "My Linkedin page")
