@@ -4,14 +4,18 @@ Semester Project 2022
 
 
 Description
+
 Added basic JWT login capabilities, and the ability to post new products aswell as adding items to a cart.
 
 
 Built With
+
 React.js
 
 Getting Started
+
 Installing
+
 This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
 Clone the repo:
