@@ -1,4 +1,4 @@
-Semester Project 2022
+# Semester Project 2022
 
 ![shoesforlife](https://user-images.githubusercontent.com/74536958/193814447-882cc0ef-4fa6-4399-afde-f7c42076e884.png)
 
