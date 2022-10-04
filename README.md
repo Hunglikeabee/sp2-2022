@@ -3,33 +3,33 @@ Semester Project 2022
 ![shoesforlife](https://user-images.githubusercontent.com/74536958/193814447-882cc0ef-4fa6-4399-afde-f7c42076e884.png)
 
 
-Description
+## Description
 
 Added basic JWT login capabilities, and the ability to post new products aswell as adding items to a cart.
 
 
-Built With
+## Built With
 
 React.js
 
-Getting Started
+## Getting Started
 
-Installing
+### Installing
 
 This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
-Clone the repo:
-
+### Clone the repo:
+    
     git clone git@github.com:Hunglikeabee/sp2-2022.git
 
-Install the dependencies:
+### Install the dependencies:
 
     npm install
 
-Running
+### Running
 
     npm run start
 
-Contact
+### Contact
 
 [My Linkedin page](https://www.linkedin.com/in/hans-christian-osbak-b318ab1b9/ "My Linkedin page")
